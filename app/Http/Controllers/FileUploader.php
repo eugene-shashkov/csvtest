@@ -11,7 +11,7 @@ class FileUploader extends Controller
 {
     public function store(Request $request){
         //dd($request->file('data'));
-        $request->data_file->store('files');
+        Storage::disk('local')->put('file.txt', 'Contents');
 
 
     }
