@@ -34,7 +34,7 @@
                     @csrf
                     <label>Upload File:</label>
                     <div class="form-group">
-                        <input name="data" type="file" accept=".csv" class="" >
+                        <input name="data_file" type="file" accept=".csv" class="" >
                         <div class="mt-2"></div>
                         <input type="submit" class="btn btn-outline-dark" value="ImportFile" >
                     </div>

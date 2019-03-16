@@ -11,9 +11,8 @@ class FileUploader extends Controller
 {
     public function store(Request $request){
         //dd($request->file('data'));
-        $file=$request->file('data');
-        Storage::put(public_path().'/files/'.time().'.csv', $file);
-        
+        $request->data_file->store('files');
+
 
     }
 }
