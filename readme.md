@@ -17,3 +17,14 @@ install dependencies
 
 
 2)php composer.phar install
+
+3)rename `.env.example` to `.env`
+
+(inside `.env` file:)
+4)change config to your database:
+DB_DATABASE=your_database_name
+DB_USERNAME=your_user_name
+DB_PASSWORD=your_password
+
+5)php artisan key:generate
+
