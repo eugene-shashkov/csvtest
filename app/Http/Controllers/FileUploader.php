@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Storage;
 class FileUploader extends Controller
 {
     public function store(Request $request){
+        
         $file = $request->file('data_file');
         // ok Storage::put('files', $file );
         // $file_real_name=$request->file('data_file')->getClientOriginalName();

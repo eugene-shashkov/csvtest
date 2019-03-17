@@ -29,17 +29,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4"></div>
-            <div class="col-md-4">
-                <form id="upload_form" method="POST" action="/store_data" enctype='multipart/form-data' >
-                    @csrf
-                    <label>Upload File:</label>
-                    <div class="form-group">
-                        <input name="data_file" type="file" accept=".csv" class="" >
-                        <div class="mt-2"></div>
-                        <input id="upload_file" type="submit" class="btn btn-outline-dark" value="Upload File" >
-                    </div>
-                </form>
-            </div>
+            <div class="col-md-4 upload-form-div"></div>
             <div class="col-md-4"></div>
         </div>
     </div>

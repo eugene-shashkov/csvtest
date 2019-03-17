@@ -36592,6 +36592,18 @@ $(document).ready(function () {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
   });
+  reset_form();
+});
+
+var reset_form = function reset_form() {
+  $.get('/load_upload_form', function (form_html) {
+    $(".upload-form-div").empty();
+    $(".upload-form-div").append(form_html);
+    upload_file();
+  });
+};
+
+var upload_file = function upload_file() {
   $("#upload_file").click(function (event) {
     //stop submit the form, we will post it manually.
     event.preventDefault();
@@ -36610,14 +36622,19 @@ $(document).ready(function () {
       success: function success(data) {
         console.log("SUCCESS : ", data);
         $("#upload_file").prop("disabled", false);
+        $(".upload-form-div").empty();
+        reset_form();
+        alert('File Uploaded');
       },
       error: function error(e) {
         console.log("ERROR : ", e);
-        $("#upload_file").prop("disabled", false);
+        alert("ERROR : ", e);
+        $(".upload-form-div").empty();
+        reset_form();
       }
     });
   });
-});
+};
 
 /***/ }),
 
