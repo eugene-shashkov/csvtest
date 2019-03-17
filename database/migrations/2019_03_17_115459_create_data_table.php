@@ -15,6 +15,16 @@ class CreateDataTable extends Migration
     {
         Schema::create('data', function (Blueprint $table) {
             $table->bigIncrements('id');
+            
+            $table->bigInteger('UID');
+            $table->string('Name');
+            $table->integer('Age');
+            $table->string('Email');
+            $table->bigInteger('Phone');
+            $table->string('Gender');
+
+
+
             $table->timestamps();
         });
     }
