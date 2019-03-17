@@ -23,9 +23,14 @@ install dependencies
 (inside `.env` file:)
 
 4)change config to your database:
+
 DB_DATABASE=your_database_name
+
 DB_USERNAME=your_user_name
+
 DB_PASSWORD=your_password
+
+
 
 5)php artisan key:generate
 
