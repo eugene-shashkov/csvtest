@@ -15,12 +15,13 @@ install dependencies
 
 (windows)
 
-
 2)php composer.phar install
 
 3)rename `.env.example` to `.env`
 
+
 (inside `.env` file:)
+
 4)change config to your database:
 DB_DATABASE=your_database_name
 DB_USERNAME=your_user_name
